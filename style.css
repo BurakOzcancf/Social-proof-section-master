@@ -1,0 +1,155 @@
+:root {
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGrayishMagenta: hsl(303, 10%, 53%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: Spartan;
+  background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, bottom right;
+  background-repeat: no-repeat;
+}
+main {
+  width: 21.25rem;
+}
+.section__intro {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.content__title {
+  color: var(--veryDarkMagenta);
+  font-size: 2.5rem;
+}
+.content__description {
+  color: var(--darkGrayishMagenta);
+  margin: 1rem 0;
+}
+.rates {
+  list-style: none;
+}
+.rate {
+  background-color: var(--lightGrayishMagenta);
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+.rate__description {
+  color: var(--veryDarkMagenta);
+  font-weight: 700;
+}
+.rate__stars img {
+  margin: 0 0.3rem;
+}
+.reviews {
+  list-style: none;
+}
+.review {
+  padding: 2rem;
+  background-color: var(--veryDarkMagenta);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.review__person {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.review__image {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.review__info {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.review__name {
+  color: var(--white);
+  font-weight: 400;
+}
+.review__statu {
+  color: var(--softPink);
+  font-weight: 400;
+}
+.review__description {
+  color: var(--lightGrayishMagenta);
+  font-weight: 400;
+}
+footer {
+  margin: 3rem 0 0;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+}
+@media only screen and (min-width: 75rem) {
+  body {
+    padding: 0 7rem;
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+  }
+  main {
+    width: 100%;
+    max-width: 90rem;
+  }
+  .section__intro {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 2rem;
+  }
+  .content {
+    text-align: initial;
+    width: 400px;
+  }
+  .content__title {
+    font-size: 3rem;
+  }
+  .content__description {
+    font-size: 1.1rem;
+  }
+  .rates {
+    padding: 0 0 0 4rem;
+  }
+  .rate {
+    display: flex;
+    justify-content: center;
+  }
+  .rate:nth-child(1) {
+    margin: 0 8rem 1rem -8rem;
+  }
+  .rate:nth-child(2) {
+    margin: 0 4rem 0 -4rem;
+  }
+  .rate__stars {
+    margin-right: 2rem;
+  }
+  .reviews {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+  .review:nth-child(1) {
+    margin: 0 2rem 0 0;
+  }
+  .review:nth-child(2) {
+    margin: 2rem 2rem -2rem 0;
+  }
+  .review:last-child {
+    margin: 4rem 0 -4rem 0;
+  }
+}
